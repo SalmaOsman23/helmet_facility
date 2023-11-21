@@ -29,7 +29,7 @@ class Home extends StatelessWidget {
                     AppAssets.homeimage,
                     fit: BoxFit.cover,
                     width: double.infinity,
-                    height: MediaQuery.of(context).size.height * 0.5,
+                    height: MediaQuery.of(context).size.height * 0.4,
                   ),
                   ListView.builder(
                     shrinkWrap: true,
@@ -168,11 +168,21 @@ class Home extends StatelessWidget {
 
   Widget PostContainer(String image, String cityName, BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * .25,
+      height: MediaQuery.of(context).size.height * 0.25,
       padding: EdgeInsets.all(8),
-      margin: EdgeInsets.all(12),
+      margin: EdgeInsets.all(10),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(22), color: Colors.grey),
+        borderRadius: BorderRadius.circular(22),
+        color: Color(0xffCCCCCC),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 5,
+            blurRadius: 5,
+            offset: Offset(0, 3),
+          ),
+        ],
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
