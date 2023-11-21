@@ -69,6 +69,7 @@ class Login extends StatelessWidget {
               child: Container(
                 width: MediaQuery.of(context).size.width * 0.8,
                 child: TextFormField(
+                  style: TextStyle(color: Colors.white),
                   controller: passwordController,
                   decoration: InputDecoration(
                     labelText: "Password here",
